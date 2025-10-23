@@ -10,4 +10,7 @@ export class Auth extends Model {
 
   @Column({ allowNull: false })
   password: string;
+
+  @Column({ allowNull: true })
+  role: string;
 }
