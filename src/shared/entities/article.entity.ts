@@ -20,8 +20,14 @@ export class Article {
     @Column()
     imgUrl: string
 
+    @Column()
+    tags: string
+
     @Column({default: false})
     isMemeberOnly: boolean
+
+    @Column({default: false})
+    isPublished: boolean
 
     @CreateDateColumn()
     createdAt: Date

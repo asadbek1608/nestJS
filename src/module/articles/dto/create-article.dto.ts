@@ -24,9 +24,13 @@ export class CreateArticleDto {
     @IsString()
     imgUrl: string
 
+    @IsArray()
+    @IsString({each: true})
+    tags: string[]
+
     @IsOptional()
     @IsBoolean()
-    IsMemeberOnly?: boolean
+    isMemeberOnly?: boolean
 
     @IsArray()
     @Type(() => CreateArticleContentDto)
